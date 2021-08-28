@@ -5,9 +5,60 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  background-color: #ebdbcd;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.app {
+  position: relative;
+  width: 900px;
+  height: 100vh;
+  margin: 100px auto 0;
+}
+
+.card {
+  width: 300px;
+  position: absolute;
+  margin: 0 auto;
+  animation: slide 5s infinite;
+  transform: translateX(0);
+  transform-origin: 0;
+  background: white;
+  text-align: left;
+  left: 300px;
+  top: 100px;
+}
+
+.card-img {
+  background: #5d6797;
+  height: 250px;
+}
+
+.card-details {
+  padding: 5px;
+}
+
+.card-shadow {
+  position: absolute;
+  width: 300px;
+  border-radius: 50%;
+  height: 15px;
+  bottom: -115px;
+  background: #494949;
+  left: 0;
+  filter: blur(1rem);
+}
+
+@keyframes slide {
+  0%   {transform: translateX(0px) scale(1)}
+  20%  {transform: translateX(-300px) scale(0.5)}
+  40%  {transform: translateX(-120px) scale(0.3); z-index: 0;}
+  60%  {transform: translateX(330px) scale(0.3); z-index: 0;}
+  80%  {transform: translateX(460px) scale(0.5)}
+  100% {transform: translateX(0) scale(1)}
 }
