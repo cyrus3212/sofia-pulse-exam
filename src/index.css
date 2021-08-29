@@ -21,6 +21,21 @@ code {
   margin: 100px auto 0;
 }
 
+.container {
+  animation: anim infinite;
+  animation-duration: 10s;
+}
+
+.title {
+  animation: titleAnimate infinite;
+  animation-duration: 10s;
+}
+
+.subtitle {
+  animation: subTitleAnimate infinite;
+  animation-duration: 10s;
+}
+
 .card {
   width: 300px;
   position: absolute;
@@ -61,4 +76,23 @@ code {
   60%  {transform: translateX(330px) scale(0.3); z-index: 0;}
   80%  {transform: translateX(460px) scale(0.5)}
   100% {transform: translateX(0) scale(1)}
+}
+
+@keyframes anim {
+  0% {opacity: 0;}
+  40% {opacity: 0;}
+  50% {opacity: 1;}
+  100% {opacity: 1;}
+}
+
+@keyframes titleAnimate {
+  0% {opacity: 0; transform: translateY(20px)}
+  10% {opacity: 0; transform: translateY(20px)}
+  30% {opacity: 1; transform: translateY(0)}
+}
+
+@keyframes subTitleAnimate {
+  0% {opacity: 0; transform: translateY(20px)}
+  20% {opacity: 0; transform: translateY(20px)}
+  40% {opacity: 1; transform: translateY(0)}
 }
